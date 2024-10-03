@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rota Certa - Aplicativo</title>
+    <link rel="shortcut icon" href="img/travel.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/travel.png" alt="Logo"/>
+            <p>Rota Certa</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <div class="input-group">
+                <h1>Calcule a média do seu veiculo!</h1>
+                <div class="init">
+                    <label for="gasolina">Quantidade de Gasolina (litros):</label>
+                    <input type="number" id="gasolinaInicial" name="gasolina" placeholder="Gasolina inicial" min="0" step="0.1">
+                    <button id="button" onclick="IniciarViagem()">Iniciar Viagem</button>
+                </div>
+                <div class="Stop" id="stop">
+                    <label for="gasolina">Quantidade Final (litros):</label>
+                    <input type="number" id="gasolinaFinal" name="gasolina" placeholder="Gasolina final" min="0" step="0.1"  >
+                    <button id="buttonFinal" onclick="FinalizarViagem()">Finalizar </button>
+                </div>
+                                             
+            </div>
+        </div>
+
+        <div id="map-container">
+            <div id="map"></div>
+
+            <div id="velocimetro">
+                <h5 id="velocidade">0</h5>
+                <h6>KM/h</h6>
+            </div>
+        </div>
+    </div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="js/map.js"></script>
+    <script src="js/velocimetro.js"></script>
+    <script src="js/dom.js"></script>
+</body>
+</html>
